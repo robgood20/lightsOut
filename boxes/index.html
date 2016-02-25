@@ -1,0 +1,41 @@
+<html ng-app="lancelot">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+
+<body ng-controller="gamecontroller">
+    <div class="grasslands" data-ng-keydown="move($event)" tabindex="0">
+        <div class="lancelot" style="top: {{y}}%; left: {{x}}%;">
+
+        </div>
+    </div>
+    <button ng-click="moveUp()"> Move up</button>
+    <button ng-click="moveDown()">move down</button>
+    <button ng-click="moveLeft()"> Move left</button>
+    <button ng-click="moveRight()"> Move right</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--load Angular-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+
+    <!--load app-->
+    <script src="app/init.js"></script>
+    <script src="app/controller/gamecontroller.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<html ng-app="routingfun">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body ng-controller="MainController">
+  
+ <!--set UI Router views-->
+ <ui-view></ui-view>
+    
+<div> <a ui-sref="home">go home</a> </div>
+<div><a ui-sref="view2">go to the view</a></div>
+    
+    
+    
+    
+<!--load angular-->
+<script src="bower_components/angular/angular.js"></script>
+
+<!--load jquery-->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+
+<!--load bootstrap-->
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+<!--load ui-router-->
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"> </script>
+
+<!--lod app-->
+<script src="app/init.js"></script>
+<script src="app/controllers/main.js"></script>
+<script src="app/controllers/route.js"></script>
+
+</body>
+</html>

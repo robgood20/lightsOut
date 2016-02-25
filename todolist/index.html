@@ -1,0 +1,42 @@
+<html  ng-app="toDo">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body ng-controller="MainController">
+ 
+ <div>
+     <h1>To Do List</h1>
+     <ul>
+         <li ng-repeat="items in todo track by $index">{{items}} <span ng-click="removeItem($index)"> X </span> </li>
+         <!--fix span for remove item-->
+     </ul>
+ </div>
+ <input  ng-model="listItem" type="text">
+ 
+ <button ng-click="addItem()">add item</button>
+   {{listItem}}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular.min.js"></script> 
+  <script src="assets/app/app.js"></script> 
+  <script src="assets/app/controller.js"></script>
+</body>
+</html>

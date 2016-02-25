@@ -1,0 +1,85 @@
+<html ng-app="addressbook">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+
+<body ng-controller="MainController">
+    <div>
+        <ul>
+            <li ng-repeat="user in book">
+                {{user.label}}
+                {{user.firstName}}
+                {{user.lastName}}
+                {{user.phoneNumber}}
+                {{user.user.email}}
+                
+            </li>
+        </ul>
+    <div id="create">
+        <form ng-submit="addUser()">
+       <div> <input ng-model="newUser.firstName" type="text" placeholder="First Name"> </div>
+       <div> <input ng-model="newUser.lastName" type="text" placeholder="Last Name"> </div>
+       <div> <input ng-model="newUser.phoneNumber" type="number" placeholder="Phone Number"> </div>
+      <div>  <input ng-model="newUser.email" type="email" placeholder="E-mail address"> </div>
+      <button>Add Contact</button>
+      <div>
+      <input ng-model="newUser.prop" type="text" placeholder="add prop">
+      <button ng-click="addProperty(newUser.prop)">add property</button>
+      </div>
+        </form>
+        
+    </div>
+    
+      
+    <div> 
+        
+       <input ng-model="zoo.name.size" type="text">
+       
+       <button ng-repeat="billy in zoo" ng-click="addProp()">button</button>
+       
+        
+        
+    </div>
+    
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    
+<!-------------Load Scripts--------------------------------------------------------------------------------------------------------------------------------------->
+    <!-- Load Jquery-->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+   
+    <!--Load bootstrap-->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    
+    <!--Load angular-->
+    <script src="bower_components/angular/angular.js"> </script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+     
+    <!--Load Firebase-->
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.js"></script>
+   
+    <!--strat app-->
+    <script src="app/init.js"> </script>
+    <script src="app/components/controllers/maincontroller.js"></script>
+<!-----------End Scripts----------------------------------------------------------------------------------------------------------------------------------------->    
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<html ng-app="codeChallenge">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+</head>
+<body ng-controller="MainController">
+
+<uib-carousel>
+    <uib-slide ng-repeat="item in listItem">
+        {{item.title}}
+    </uib-slide>
+</uib-carousel>
+
+<input ng-model="newItem.title" type="text">
+<button ng-click="addItem()">Add item</button>
+
+
+
+
+
+<!--Load Angular-->
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.1.2.js"></script>
+
+
+<!--start app-->
+<script src="app/config/module.js"></script>
+<script src="app/config/maincontroller.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html ng-app="money">
+<head>
+    <meta charset="UTF-8">
+    <title>ShowMeTheMoney</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body ng-controller="MainController as MC">
+    <button ng-class="{'active': MC.activeImg === 'money'}" ng-click="MC.setActiveImg('money')">Show me the money</button>
+    <button ng-class="{'active': MC.activeImg === 'why'}" ng-click="MC.setActiveImg('why')">why are you doing this</button>
+    <button ng-class="{'active': MC.activeImg === 'pizza'}" ng-click="MC.setActiveImg('pizza')">show me the pizza</button>
+    <button ng-class="{'active': MC.activeImg === 'bears'}" ng-click="MC.setActiveImg('bears')">show me dem Bears</button></br>
+    <img ng-show="MC.activeImg === 'money'" src="http://blog.nimblecommerce.com/wp-content/uploads/2014/10/money.jpg" style="height:200" px alt="money pic here">
+    <img ng-show="MC.activeImg === 'bears'" src="http://wallpoper.com/images/00/32/79/27/teddy-bears_00327927.jpg" style="height:200" px alt="bears">
+    <img ng-show="MC.activeImg === 'pizza'" src="http://4.bp.blogspot.com/-rlZH4ysJlEk/VS_BR9l9KOI/AAAAAAAATyU/Wg9ek6JEP1M/s1600/48943666.jpg" style="height:200" px alt="pizza pic here">
+    <img ng-show="MC.activeImg === 'why'" src="http://www.fieldone.com/hs-fs/hub/330014/file-2665655578-jpg/start-with-why.jpg" style="height:200" px alt="why pic here">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular.min.js" type="text/javascript"></script>
+    <script src="assets/app/app.js"> </script>
+    <script src="app/components/main-controller.js"></script>
+</body>
+</html>

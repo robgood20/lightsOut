@@ -1,0 +1,60 @@
+<html ng-app="project">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body ng-controller="MainController">
+    <!--user login-->
+    <div></div>
+    <form ng-submit="submitform(user)" ng-show="!member">
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" ng-model="user.email">
+        </div>
+        <div class="form group">
+            <label for="password">Password:</label>
+            <input type="password" ng-model="user.password">
+        </div>
+        <div class="button-group">
+            <!--login in user-->
+            <button ng-click="login()" type="submit">Login</button>
+            <!--create user-->
+            <div class="button-group">
+                <button ng-click="register()" type="submit">Register Account</button>
+            </div>
+        </div>
+    </form>
+
+    <div ng-show="member">
+        <h1>Welcome {{member.username}}</h1>
+        <ul class="list-group">
+            <li class = "list-group-item" ng-repeat="item in itemList">
+                {{item.body}}
+                <span class="badge" ng-click="removeItem(item)">x</span>
+            </li>
+            <input type="text" ng-model="newItem" />
+            <button ng-click="addItem()">Add Item</button>
+        </ul>
+    </div>
+
+
+    <!--start of scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <!-- Load fire base-->
+    <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+    <!-- helper to firebase angularfire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
+
+    <!--load created scripts-->
+    <script src="assets/app/app.js"></script>
+    <script src="assets/app/controller.js"></script>
+
+    <!--end scripts-->
+</body>
+
+</html>
